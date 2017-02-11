@@ -22,7 +22,6 @@ final class Base63 {
             $str .= self::$_charset[$r[1]->toString()];
             $r = $big_int->divide($big_int_base);
             if ($r[0]->compare(self::_bigInt(1)) == -1) {
-                $big_int = $r[0];
                 $str .= self::$_charset[$r[1]->toString()];
                 break;
             }
